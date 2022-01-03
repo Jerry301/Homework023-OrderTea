@@ -1,0 +1,252 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0D6-HK-BIs"; */
+"0D6-HK-BIs.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Jerry"; ObjectID = "0Sm-L8-8bQ"; */
+"0Sm-L8-8bQ.text" = "Jerry";
+
+/* Class = "UIButton"; configuration.title = "炙夏冰沙"; ObjectID = "1ES-UQ-auQ"; */
+"1ES-UQ-auQ.configuration.title" = "炙夏冰沙";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1ES-UQ-auQ"; */
+"1ES-UQ-auQ.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; 2Rr-kL-iOD.segmentTitles[0] = "First"; ObjectID = "2Rr-kL-iOD"; */
+"2Rr-kL-iOD.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; 2Rr-kL-iOD.segmentTitles[1] = "Second"; ObjectID = "2Rr-kL-iOD"; */
+"2Rr-kL-iOD.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "去冰"; ObjectID = "4Pk-bY-760"; */
+"4Pk-bY-760.text" = "去冰";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "5Is-Fy-EpO"; */
+"5Is-Fy-EpO.text" = "中杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7L5-6O-RpR"; */
+"7L5-6O-RpR.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Ra-4F-Y4V"; */
+"7Ra-4F-Y4V.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "大杯"; ObjectID = "93x-hv-A8S"; */
+"93x-hv-A8S.text" = "大杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "98j-t9-bi5"; */
+"98j-t9-bi5.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "AGO-OB-eJn"; */
+"AGO-OB-eJn.title" = "Item";
+
+/* Class = "UISegmentedControl"; AXj-XY-dim.segmentTitles[0] = "First"; ObjectID = "AXj-XY-dim"; */
+"AXj-XY-dim.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; AXj-XY-dim.segmentTitles[1] = "Second"; ObjectID = "AXj-XY-dim"; */
+"AXj-XY-dim.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "500元"; ObjectID = "BFf-hp-uBB"; */
+"BFf-hp-uBB.text" = "500元";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BMM-bu-LNH"; */
+"BMM-bu-LNH.text" = "Label";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "BVR-52-RU3"; */
+"BVR-52-RU3.text" = "中杯";
+
+/* Class = "UILabel"; text = "元"; ObjectID = "Ciq-jy-0NP"; */
+"Ciq-jy-0NP.text" = "元";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EVb-lN-riN"; */
+"EVb-lN-riN.text" = "Label";
+
+/* Class = "UILabel"; text = "奶茶"; ObjectID = "F3p-qf-Cdb"; */
+"F3p-qf-Cdb.text" = "奶茶";
+
+/* Class = "UILabel"; text = "大杯"; ObjectID = "FM3-Nb-9e1"; */
+"FM3-Nb-9e1.text" = "大杯";
+
+/* Class = "UISegmentedControl"; HJf-28-mbW.segmentTitles[0] = "First"; ObjectID = "HJf-28-mbW"; */
+"HJf-28-mbW.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; HJf-28-mbW.segmentTitles[1] = "Second"; ObjectID = "HJf-28-mbW"; */
+"HJf-28-mbW.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "大杯"; ObjectID = "IhP-cc-ZRD"; */
+"IhP-cc-ZRD.text" = "大杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Iu2-QP-SY6"; */
+"Iu2-QP-SY6.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "J9I-Dr-f5Z"; */
+"J9I-Dr-f5Z.text" = "Label";
+
+/* Class = "UILabel"; text = "奶茶"; ObjectID = "JVl-32-VfQ"; */
+"JVl-32-VfQ.text" = "奶茶";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KwR-6l-kf5"; */
+"KwR-6l-kf5.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "新鮮果茶"; ObjectID = "KyI-uH-jHO"; */
+"KyI-uH-jHO.configuration.title" = "新鮮果茶";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KyI-uH-jHO"; */
+"KyI-uH-jHO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LYR-2G-Fw2"; */
+"LYR-2G-Fw2.text" = "Label";
+
+/* Class = "UILabel"; text = "元"; ObjectID = "Lih-go-wPy"; */
+"Lih-go-wPy.text" = "元";
+
+/* Class = "UILabel"; text = "大杯"; ObjectID = "Mux-Be-8ke"; */
+"Mux-Be-8ke.text" = "大杯";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NVJ-Im-XtW"; */
+"NVJ-Im-XtW.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "O2S-vT-ULD"; */
+"O2S-vT-ULD.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "經典原茶"; ObjectID = "OLY-cv-vkO"; */
+"OLY-cv-vkO.configuration.title" = "經典原茶";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OLY-cv-vkO"; */
+"OLY-cv-vkO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "椰果"; ObjectID = "OMY-XU-Yhj"; */
+"OMY-XU-Yhj.text" = "椰果";
+
+/* Class = "UISegmentedControl"; PyJ-Oq-XHT.segmentTitles[0] = "First"; ObjectID = "PyJ-Oq-XHT"; */
+"PyJ-Oq-XHT.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; PyJ-Oq-XHT.segmentTitles[1] = "Second"; ObjectID = "PyJ-Oq-XHT"; */
+"PyJ-Oq-XHT.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RLf-5f-UyQ"; */
+"RLf-5f-UyQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RYj-qD-HMW"; */
+"RYj-qD-HMW.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SO3-EH-BR1"; */
+"SO3-EH-BR1.text" = "Label";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "SdA-i6-ukG"; */
+"SdA-i6-ukG.text" = "中杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UR9-X6-Z0B"; */
+"UR9-X6-Z0B.text" = "Label";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "V37-xw-94M"; */
+"V37-xw-94M.text" = "中杯";
+
+/* Class = "UISegmentedControl"; XOt-Pi-PpS.segmentTitles[0] = "First"; ObjectID = "XOt-Pi-PpS"; */
+"XOt-Pi-PpS.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; XOt-Pi-PpS.segmentTitles[1] = "Second"; ObjectID = "XOt-Pi-PpS"; */
+"XOt-Pi-PpS.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "1杯"; ObjectID = "Xkf-Ud-ZuQ"; */
+"Xkf-Ud-ZuQ.text" = "1杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y8X-zu-EdY"; */
+"Y8X-zu-EdY.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "訂購"; ObjectID = "YXr-I8-ooZ"; */
+"YXr-I8-ooZ.configuration.title" = "訂購";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YXr-I8-ooZ"; */
+"YXr-I8-ooZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "YYZ-IC-Zn0"; */
+"YYZ-IC-Zn0.text" = "中杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c0R-IV-0Ex"; */
+"c0R-IV-0Ex.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cpi-dz-1kT"; */
+"cpi-dz-1kT.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d2k-ax-cjy"; */
+"d2k-ax-cjy.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "大杯"; ObjectID = "d4b-oo-we3"; */
+"d4b-oo-we3.text" = "大杯";
+
+/* Class = "UILabel"; text = "70元"; ObjectID = "f2c-OS-ag3"; */
+"f2c-OS-ag3.text" = "70元";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fNt-VW-rqf"; */
+"fNt-VW-rqf.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gEX-0X-Hu0"; */
+"gEX-0X-Hu0.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gsp-Z8-G3g"; */
+"gsp-Z8-G3g.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "hmS-vR-9sT"; */
+"hmS-vR-9sT.title" = "Item";
+
+/* Class = "UISegmentedControl"; jDl-xG-r1y.segmentTitles[0] = "First"; ObjectID = "jDl-xG-r1y"; */
+"jDl-xG-r1y.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; jDl-xG-r1y.segmentTitles[1] = "Second"; ObjectID = "jDl-xG-r1y"; */
+"jDl-xG-r1y.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jIc-pq-XP5"; */
+"jIc-pq-XP5.text" = "Label";
+
+/* Class = "UILabel"; text = "奶茶"; ObjectID = "jge-3h-hXl"; */
+"jge-3h-hXl.text" = "奶茶";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jkK-Xi-3Rm"; */
+"jkK-Xi-3Rm.text" = "Label";
+
+/* Class = "UILabel"; text = "珍奶"; ObjectID = "l4w-Mq-szr"; */
+"l4w-Mq-szr.text" = "珍奶";
+
+/* Class = "UILabel"; text = "奶茶"; ObjectID = "mgH-gh-YWp"; */
+"mgH-gh-YWp.text" = "奶茶";
+
+/* Class = "UIButton"; configuration.title = "香醇奶茶"; ObjectID = "mjG-ig-ESv"; */
+"mjG-ig-ESv.configuration.title" = "香醇奶茶";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mjG-ig-ESv"; */
+"mjG-ig-ESv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "半糖"; ObjectID = "mzG-Ai-WrD"; */
+"mzG-Ai-WrD.text" = "半糖";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nqa-G2-dht"; */
+"nqa-G2-dht.text" = "Label";
+
+/* Class = "UILabel"; text = "總金額"; ObjectID = "p60-XM-9xJ"; */
+"p60-XM-9xJ.text" = "總金額";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "p8c-lE-w1M"; */
+"p8c-lE-w1M.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "純鮮奶茶"; ObjectID = "pNm-Oe-0XE"; */
+"pNm-Oe-0XE.configuration.title" = "純鮮奶茶";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pNm-Oe-0XE"; */
+"pNm-Oe-0XE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "中杯"; ObjectID = "qIL-rU-TuS"; */
+"qIL-rU-TuS.text" = "中杯";
+
+/* Class = "UIButton"; configuration.title = "修改訂單"; ObjectID = "rdT-Vm-H8x"; */
+"rdT-Vm-H8x.configuration.title" = "修改訂單";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rdT-Vm-H8x"; */
+"rdT-Vm-H8x.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "奶茶"; ObjectID = "tso-zK-NBQ"; */
+"tso-zK-NBQ.text" = "奶茶";
+
+/* Class = "UILabel"; text = "12杯"; ObjectID = "uFI-3F-jWd"; */
+"uFI-3F-jWd.text" = "12杯";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ySa-0w-jeN"; */
+"ySa-0w-jeN.text" = "Label";
