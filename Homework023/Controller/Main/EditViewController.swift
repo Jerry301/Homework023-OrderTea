@@ -108,8 +108,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         for i in 0...Topping.allCases.count-1 {
             if toppingArr[i] == "false" {
                 toppingArr[i] = ""
-            }
-            if toppingArr[i] == "true" {
+            } else {
+//            if toppingArr[i] == "true" {
                 toppingChecked[i] = true
                 toppingArr[i] = Topping.allCases[i].rawValue
             }
@@ -295,7 +295,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             return cell
             
         case .capacity:
-            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(CapacityTableViewCell.self)") as? CapacityTableViewCell
+            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(CapacityTableViewCell.self)", for: indexPath) as? CapacityTableViewCell
             else {return UITableViewCell()}
             
             cell.delegate = self
@@ -310,7 +310,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
                 break
             }
             
-            cell.capacitySegmentedControl.selectedSegmentTintColor = .blue
+            cell.capacitySegmentedControl.selectedSegmentTintColor = .green
             if midPrice == 0 {
                 cell.capacitySegmentedControl.removeSegment(at: 1, animated: false)
                 cell.capacitySegmentedControl.setTitle("\(Capacity.middleLevel.rawValue)", forSegmentAt: 0)
@@ -323,7 +323,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             return cell
             
         case .sugar:
-            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(SugarTableViewCell.self)") as? SugarTableViewCell
+            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(SugarTableViewCell.self)", for: indexPath) as? SugarTableViewCell
             else {return UITableViewCell()}
             
             cell.delegate = self
@@ -346,7 +346,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
                 break
             }
             
-            cell.sugarSegmentedControl.selectedSegmentTintColor = .blue
+            cell.sugarSegmentedControl.selectedSegmentTintColor = .green
             
             cell.sugarSegmentedControl.setTitle("\(Sugar.normal.rawValue)", forSegmentAt: 0)
             cell.sugarSegmentedControl.setTitle("\(Sugar.less.rawValue)", forSegmentAt: 1)
@@ -359,7 +359,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             return cell
             
         case .temp:
-            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(TempTableViewCell.self)") as? TempTableViewCell
+            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(TempTableViewCell.self)", for: indexPath) as? TempTableViewCell
             else {return UITableViewCell()}
             
             cell.delegate = self
@@ -383,7 +383,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
                 break
             }
             
-            cell.tempSegmentedControl.selectedSegmentTintColor = .blue
+            cell.tempSegmentedControl.selectedSegmentTintColor = .green
             
             cell.tempSegmentedControl.setTitle("\(Temp.iceNormal.rawValue)", forSegmentAt: 0)
             cell.tempSegmentedControl.setTitle("\(Temp.iceLess.rawValue)", forSegmentAt: 1)
@@ -396,7 +396,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             return cell
             
         case .topping:
-            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(ToppingsTableViewCell.self)") as? ToppingsTableViewCell
+            guard let cell = editTableView.dequeueReusableCell(withIdentifier: "\(ToppingsTableViewCell.self)", for: indexPath) as? ToppingsTableViewCell
             else {return UITableViewCell()}
             
             cell.toppingNameLabel.text = Topping.allCases[indexPath.row].rawValue
@@ -405,7 +405,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             
             if toppingChecked[indexPath.row]{
                 cell.addToppingBtn.setImage(UIImage(named: "circleCheckMark"), for: .normal)
-                cell.backgroundColor = .blue
+                cell.backgroundColor = .green
             } else {
                 cell.addToppingBtn.setImage(UIImage(named: "circle"), for: .normal)
                 cell.backgroundColor = .none

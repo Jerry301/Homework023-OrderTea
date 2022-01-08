@@ -144,9 +144,9 @@ extension CountViewController: UITableViewDataSource, UITableViewDelegate {
             
             let order = self.orderList[indexPath.row]
             
-            let alertController = UIAlertController(title: "\(order.fields.orderer):\(order.fields.drinkName)", message: "確定刪除此訂單嗎？", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "\(order.fields.orderer):\(order.fields.drinkName)", message: "確定要刪除此訂單嗎？", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "訂購", style: .default) { (_) in
+            let okAction = UIAlertAction(title: "刪除", style: .default) { (_) in
 //                self.loading.startAnimating()
                 MenuController.shared.deleteOrder(orderID: order.id!) { result in
                     switch result {
@@ -167,7 +167,7 @@ extension CountViewController: UITableViewDataSource, UITableViewDelegate {
                 }
             }
             
-            let cancelAction = UIAlertAction(title: "刪除", style: .default, handler: nil)
+            let cancelAction = UIAlertAction(title: "保留", style: .default, handler: nil)
             alertController.addAction(okAction)
             alertController.addAction(cancelAction)
             present(alertController, animated: true, completion: nil)

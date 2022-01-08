@@ -18,7 +18,7 @@ class Menu4CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MenuController.shared.fetchMenuRecords(page) { result in
+        MenuController.shared.fetchMenuRecords(page) { (result) in
             switch result {
             case .success(let menuRecord):
                 self.updateUI(with: menuRecord)
@@ -73,7 +73,7 @@ class Menu4CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? Menu4CollectionViewCell else {return UICollectionViewCell()}
         let menuRecord = menuRecords[indexPath.item]

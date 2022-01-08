@@ -18,7 +18,7 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var drinkStatusLabel: UILabel!
-    
+        
     
     let menuItem : Array<MenuRecord>
     let indexPath: Int
@@ -230,7 +230,7 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             else {return UITableViewCell()}
             
             cell.delegate = self
-            cell.capacitySegmentedControl.selectedSegmentTintColor = .blue
+            cell.capacitySegmentedControl.selectedSegmentTintColor = .green
             if largePrice == 0 {
                 cell.capacitySegmentedControl.removeSegment(at: 1, animated: false)
                 cell.capacitySegmentedControl.setTitle("\(Capacity.middleLevel.rawValue)", forSegmentAt: 0)
@@ -246,7 +246,7 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = orderTableView.dequeueReusableCell(withIdentifier: "\(SugarTableViewCell.self)", for: indexPath) as? SugarTableViewCell
             else {return UITableViewCell()}
             cell.delegate = self
-            cell.sugarSegmentedControl.selectedSegmentTintColor = .blue
+            cell.sugarSegmentedControl.selectedSegmentTintColor = .green
             
             cell.sugarSegmentedControl.setTitle("\(Sugar.normal.rawValue)", forSegmentAt: 0)
             cell.sugarSegmentedControl.setTitle("\(Sugar.less.rawValue)", forSegmentAt: 1)
@@ -263,7 +263,7 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             else {return UITableViewCell()}
             
             cell.delegate = self
-            cell.tempSegmentedControl.selectedSegmentTintColor = .blue
+            cell.tempSegmentedControl.selectedSegmentTintColor = .green
             
             cell.tempSegmentedControl.setTitle("\(Temp.iceNormal.rawValue)", forSegmentAt: 0)
             cell.tempSegmentedControl.setTitle("\(Temp.iceLess.rawValue)", forSegmentAt: 1)
@@ -285,7 +285,7 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             
             if toppingChecked[indexPath.row]{
                 cell.addToppingBtn.setImage(UIImage(named: "circleCheckMark"), for: .normal)
-                cell.backgroundColor = .blue
+                cell.backgroundColor = .green
             } else {
                 cell.addToppingBtn.setImage(UIImage(named: "circle"), for: .normal)
                 cell.backgroundColor = .none

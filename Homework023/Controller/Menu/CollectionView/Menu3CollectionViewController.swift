@@ -18,7 +18,7 @@ class Menu3CollectionViewController: UICollectionViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MenuController.shared.fetchMenuRecords(page) { result in
+        MenuController.shared.fetchMenuRecords(page) { (result) in
             switch result {
             case .success(let menuRecord):
                 self.updateUI(with: menuRecord)

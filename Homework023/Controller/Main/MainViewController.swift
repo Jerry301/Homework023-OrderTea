@@ -22,16 +22,27 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        putInCategoryItems ()
+        
         categoryButton.forEach { UIButton in
             UIButton.setTitleColor(.gray, for: .normal)
         }
         categoryButton[0].setTitleColor(.red, for: .normal)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         fetchOrder()
+        
+    }
+    
+    func putInCategoryItems (){
+        let category = CategoryList.allCases
+        
+        for i in 0...category.count-1 {
+            categoryButton[i].setTitle("\(category[i].rawValue)", for: .normal)
+        }
+        
     }
     
     func fetchOrder() {
@@ -55,11 +66,8 @@ class MainViewController: UIViewController {
                 let tabItem = items.object(at: 1) as! UITabBarItem
                 tabItem.badgeValue = "\(orderList.count)"
                 print("訂單數量：\(orderList.count)")
-
             }
-//            self.loading.stopAnimating()
         }
-
     }
     
     func displayError(_ error: Error, title: String) {
@@ -75,7 +83,7 @@ class MainViewController: UIViewController {
         let x = CGFloat(sender.tag) * width
         let offset = CGPoint(x: x, y: 0)
         menuScrollView.setContentOffset(offset, animated: true)
-
+        
         //設定分類按鈕是灰體字
         categoryButton.forEach { sender in
             sender.setTitleColor(.gray, for: .normal)
@@ -84,7 +92,23 @@ class MainViewController: UIViewController {
         let currentIndex = Int(offset.x/width)
         if currentIndex == sender.tag {
             categoryButton[sender.tag].setTitleColor(.red, for: .normal)
+
         }
+        
+    }
+    
+    func sycnCategoryItem () -> Int{
+        let width = menuScrollView.bounds.width
+        let z = menuScrollView.contentOffset.x
+        let location = Int(z / width)
+        
+        return location
     }
 }
 
+extension MainViewController {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let page = scrollView.contentOffset.x / scrollView.bounds.width
+        categoryButton[Int(page)].setTitleColor(.red, for: .normal)
+    }
+}

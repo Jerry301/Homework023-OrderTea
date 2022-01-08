@@ -25,6 +25,6 @@ struct MenuRecord : Codable {
     let fields : MenuFields
 }
 
-struct Menu: Decodable {
+struct Menu: Codable {
     let records : [MenuRecord]
 }

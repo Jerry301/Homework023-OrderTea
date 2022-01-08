@@ -9,6 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
 class Menu1CollectionViewController: UICollectionViewController {
     
     var menuRecords = Array<MenuRecord>()
@@ -30,7 +31,7 @@ class Menu1CollectionViewController: UICollectionViewController {
         configureCellSize()
     }
     
-    func configureCellSize (){
+    func configureCellSize(){
         let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
         let width = UIScreen.main.bounds.width / 2.2
         flowLayout?.itemSize = CGSize(width: width, height: width*1.2)
