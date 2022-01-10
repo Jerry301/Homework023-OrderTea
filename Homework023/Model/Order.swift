@@ -18,10 +18,8 @@ struct OrderFields: Codable {
     var quantity : Int
     var subtotal : Int
     var time : String
-    
     let largePrice : Int
     let midPrice : Int
-//    let coldOnly : String?
     let category : String
     var toppingsArrString : String
 }

@@ -26,7 +26,6 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
     let midPrice : Int
     let drinkName : String
     let category : String
-//    let reminder : String
     var imageUrl : String
     
     init?(coder: NSCoder, menuItem: Array<MenuRecord>, indexPath: Int){
@@ -36,7 +35,6 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
         self.midPrice = menuItem[indexPath].fields.midPrice ?? 0
         self.drinkName = menuItem[indexPath].fields.name
         self.category = menuItem[indexPath].fields.category
-//        self.reminder = menuItem[indexPath].fields.reminder ?? ""
         self.imageUrl = menuItem[indexPath].fields.image.first?.url ?? ""
         super.init(coder: coder)
     }
@@ -59,7 +57,7 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
     var toppingPrice = 0
     var toppingChecked = Array(repeating: false, count: Topping.allCases.count)
     var toppingArr = Array(repeating: "", count: Topping.allCases.count)
-    var toppingArrString = String(repeating: "false", count: Topping.allCases.count)
+    var toppingArrString = String(repeating: "false,", count: Topping.allCases.count)
     
     
     override func viewDidLoad() {
@@ -72,7 +70,7 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
         toppingArrString.remove(at: toppingArrString.index(before: toppingArrString.endIndex))
         
         drinkNameLabel.text = menuItem[indexPath].fields.name
-        drinkPrice = menuItem[indexPath].fields.largePrice!
+        drinkPrice = menuItem[indexPath].fields.midPrice!
         quantityLabel.text = "\(countNum)"
         capacity = Capacity.largeLevel.rawValue
         sugar = "\(Sugar.normal.rawValue)甜"
@@ -91,7 +89,6 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         time = formatter.string(from: now)
-        print("Created Time: \(time!)")
     }
     
     func updateDrinkStatus () {
@@ -113,7 +110,6 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
             case .success(let image):
                 DispatchQueue.main.async {
                     self.drinkImageView.image = image
-                    //                    self.loading.stopAnimating()
                 }
             case .failure(let networkError):
                 switch networkError {
@@ -140,7 +136,7 @@ class OrderViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func plusButtonClicked(_ sender: UIButton) {
-        if countNum < 99 {
+        if countNum < 100 {
             countNum += 1
             quantityLabel.text = "\(countNum)"
             
@@ -222,7 +218,6 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             guard let orderName = newOrderer
             else {return cell}
             cell.ordererTextField.text = orderName
-            print("訂購人：\(newOrderer!)")
             return cell
             
         case .capacity:
@@ -272,7 +267,7 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
             cell.tempSegmentedControl.setTitle("\(Temp.warm.rawValue)", forSegmentAt: 4)
             cell.tempSegmentedControl.setTitle("\(Temp.hot.rawValue)", forSegmentAt: 5)
             
-//            updateDrinkStatus()
+            updateDrinkStatus()
             return cell
             
         case .topping:
@@ -348,32 +343,23 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
                 toppingPrice += ToppingPrice.allCases[indexPath.row].price
                 toppingArr[indexPath.row] = Topping.allCases[indexPath.row].rawValue
                 
-                //轉成 String 以利上傳
                 let toppingTrue = toppingArr.filter{$0 != ""}
                 let stringToppingTrue = toppingTrue.joined(separator: ",")
                 topping = stringToppingTrue
-                //從 bool array 轉成 String Array
                 let result = toppingChecked.map{$0 == true ? "true":"false"}
-                //從 string array 轉成 bool array
                 let resultString = result.filter{$0 != ""}
-                //將結果承接起來
                 toppingArrString = resultString.joined(separator: ",")
             } else {
                 toppingPrice -= ToppingPrice.allCases[indexPath.row].price
                 toppingArr[indexPath.row] = ""
                 
-                //轉成 String 以利上傳
                 let toppingTrue = toppingArr.filter{$0 != ""}
                 let stringToppingTrue = toppingTrue.joined(separator: ",")
                 topping = stringToppingTrue
-                //從 bool array 轉成 String Array
                 let result = toppingChecked.map{$0 == true ? "true":"false"}
-                //從 string array 轉成 bool array
                 let resultString = result.filter{$0 != ""}
-                //將結果承接起來
                 toppingArrString = resultString.joined(separator: ",")
             }
-            print("Topping: \(toppingArr)")
             updateDrinkStatus()
             updateSubtotal()
         }
@@ -383,7 +369,6 @@ extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension OrderViewController: CapacityTableViewCellDelegate {
     func toggleCapacitySegmentedCtrl(with index: Int) {
-        print("toggleCapacitySegmentedCtrl")
         switch index {
         case 0:
             drinkPrice = midPrice
@@ -401,7 +386,6 @@ extension OrderViewController: CapacityTableViewCellDelegate {
 
 extension OrderViewController: SugarTableViewCellDelegate {
     func toggleSugarSegmentedCtrl(with index: Int) {
-        print("toggleSugarSegmentedCtrl")
         switch index {
         case 0:
             sugar = "\(Sugar.normal.rawValue)甜"
@@ -424,7 +408,6 @@ extension OrderViewController: SugarTableViewCellDelegate {
 
 extension OrderViewController: TempTableViewCellDelegate {
     func toggleTempSegmentedCtrl(with index: Int) {
-        print("toggleTempSegmentedCtrl")
         
         switch index {
         case 0:

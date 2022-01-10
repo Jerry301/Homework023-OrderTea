@@ -101,15 +101,13 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
     
     func initTopping (){
-        //轉成 string
         toppingArr = toppingArrString.components(separatedBy: ",")
         
-        //如果沒有 topping 改為空字串，如果有把相對品項叫出來
         for i in 0...Topping.allCases.count-1 {
             if toppingArr[i] == "false" {
                 toppingArr[i] = ""
-            } else {
-//            if toppingArr[i] == "true" {
+            }
+            if toppingArr[i] == "true" {
                 toppingChecked[i] = true
                 toppingArr[i] = Topping.allCases[i].rawValue
             }
@@ -122,7 +120,6 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         editTime = formatter.string(from: now)
-        print("Edit time: \(editTime!)")
     }
     
     func updateDrinkStatus(){
@@ -193,7 +190,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func plusBtn(_ sender: UIButton) {
-        if countNum > 99 {
+        if countNum < 100 {
             countNum += 1
             quantityLabel.text = "\(countNum)"
             updateSubtotal()
@@ -215,22 +212,22 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             MenuController.shared.updateOrder(orderData: updateOrder) { result in
                 switch result {
                 case .success(let content):
-                    print("update success:\(content)")
+                    print("Update success:\(content)")
                     
                     if content.contains("records"){
-                        print("I found records")
+                        print("Records are avaliable.")
                         
                         DispatchQueue.main.async {
                             self.showAlert(title: "感謝！", message: "修改成功！")
                         }
                     }else {
-                        print("I don't find records")
+                        print("Records are not avaliable.")
                         DispatchQueue.main.async {
                             self.showAlert(title: "抱歉！", message: "修改訂單失敗！")
                         }
                     }
                 case .failure(let error):
-                    print("update failure: \(error)")
+                    print("Update failure: \(error)")
                     DispatchQueue.main.async {
                         self.showAlert(title: "抱歉！", message: "修改訂單失敗！")
                     }
@@ -311,7 +308,7 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
             }
             
             cell.capacitySegmentedControl.selectedSegmentTintColor = .green
-            if midPrice == 0 {
+            if largePrice == 0 {
                 cell.capacitySegmentedControl.removeSegment(at: 1, animated: false)
                 cell.capacitySegmentedControl.setTitle("\(Capacity.middleLevel.rawValue)", forSegmentAt: 0)
                 self.capacity = cell.capacitySegmentedControl.titleForSegment(at: cell.capacitySegmentedControl.selectedSegmentIndex)!
@@ -436,18 +433,14 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
                 toppingPrice += ToppingPrice.allCases[indexPath.row].price
                 
                 toppingArr[indexPath.row] = Topping.allCases[indexPath.row].rawValue
-                
-                //轉換成 string
-                
+                                
                 let toppingTrue = toppingArr.filter{ $0 != ""}
                 let stringToppingTrue = toppingTrue.joined(separator: ",")
                 
                 topping = stringToppingTrue
                 
-                //toppingChecked 從 bool array 轉成 string array
                 let result = toppingChecked.map{$0 == true ? "true":"false"}
                 
-                //string array 轉成 string
                 let resultString = result.filter{$0 != ""}
                 toppingArrString = resultString.joined(separator: ",")
                 
@@ -460,14 +453,11 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
                 
                 topping = stringToppingTrue
                 
-                //toppingChecked 從 bool array 轉成 string array
                 let result = toppingChecked.map{$0 == true ? "true":"false"}
                 
-                //string array 轉成 string
                 let resultString = result.filter{$0 != ""}
                 toppingArrString = resultString.joined(separator: ",")
             }
-            print("Topping: \(toppingArr)")
             updateDrinkStatus()
             updateSubtotal()
         }
@@ -477,7 +467,6 @@ extension EditViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension EditViewController: CapacityTableViewCellDelegate {
     func toggleCapacitySegmentedCtrl(with index: Int) {
-        print("toggleCapacitySegmentedCtrl")
         switch index {
         case 0:
             drinkPrice = midPrice
@@ -496,7 +485,6 @@ extension EditViewController: CapacityTableViewCellDelegate {
 
 extension EditViewController: SugarTableViewCellDelegate {
     func toggleSugarSegmentedCtrl(with index: Int) {
-        print("toggleSugarSegmentedCtrl")
         
         switch index {
         case 0:
@@ -521,7 +509,6 @@ extension EditViewController: SugarTableViewCellDelegate {
 
 extension EditViewController: TempTableViewCellDelegate {
     func toggleTempSegmentedCtrl(with index: Int) {
-        print("toggleTempSegmentedCtrl")
         
         switch index {
         case 0:

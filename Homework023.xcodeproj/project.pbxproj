@@ -33,7 +33,6 @@
 		06EC7EF4277AB5E9003E529B /* SugarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC7EF3277AB5E9003E529B /* SugarTableViewCell.swift */; };
 		06EC7EF6277AB5FC003E529B /* TempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC7EF5277AB5FC003E529B /* TempTableViewCell.swift */; };
 		06EC7EF8277AB613003E529B /* ToppingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC7EF7277AB613003E529B /* ToppingsTableViewCell.swift */; };
-		06EC7EFA277AB643003E529B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC7EF9277AB643003E529B /* LoadingViewController.swift */; };
 		06EC7EFC277AF0D6003E529B /* OrdererTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC7EFB277AF0D6003E529B /* OrdererTableViewCell.swift */; };
 		06F7D0F3277835D50001CACD /* Menu1CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7D0F2277835D50001CACD /* Menu1CollectionViewController.swift */; };
 		06F7D0FD27783EFF0001CACD /* Menu1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7D0FC27783EFF0001CACD /* Menu1CollectionViewCell.swift */; };
@@ -69,7 +68,6 @@
 		06EC7EF3277AB5E9003E529B /* SugarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTableViewCell.swift; sourceTree = "<group>"; };
 		06EC7EF5277AB5FC003E529B /* TempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTableViewCell.swift; sourceTree = "<group>"; };
 		06EC7EF7277AB613003E529B /* ToppingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingsTableViewCell.swift; sourceTree = "<group>"; };
-		06EC7EF9277AB643003E529B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		06EC7EFB277AF0D6003E529B /* OrdererTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdererTableViewCell.swift; sourceTree = "<group>"; };
 		06F7D0F2277835D50001CACD /* Menu1CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu1CollectionViewController.swift; sourceTree = "<group>"; };
 		06F7D0FC27783EFF0001CACD /* Menu1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu1CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				06EC7EF3277AB5E9003E529B /* SugarTableViewCell.swift */,
 				06EC7EF5277AB5FC003E529B /* TempTableViewCell.swift */,
 				06EC7EF7277AB613003E529B /* ToppingsTableViewCell.swift */,
-				06EC7EF9277AB643003E529B /* LoadingViewController.swift */,
 				06EC7EFB277AF0D6003E529B /* OrdererTableViewCell.swift */,
 			);
 			path = Support;
@@ -299,7 +296,6 @@
 				068C4A4E2776EBEE00A69172 /* AppDelegate.swift in Sources */,
 				06EC7EF4277AB5E9003E529B /* SugarTableViewCell.swift in Sources */,
 				06AF571827796E3400BA0D12 /* Order.swift in Sources */,
-				06EC7EFA277AB643003E529B /* LoadingViewController.swift in Sources */,
 				068C4A622777236000A69172 /* Menu.swift in Sources */,
 				068C4A502776EBEE00A69172 /* SceneDelegate.swift in Sources */,
 				06C67692277D7B6B00A374A3 /* Menu2CollectionViewCell.swift in Sources */,

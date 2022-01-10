@@ -147,7 +147,6 @@ extension CountViewController: UITableViewDataSource, UITableViewDelegate {
             let alertController = UIAlertController(title: "\(order.fields.orderer):\(order.fields.drinkName)", message: "確定要刪除此訂單嗎？", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "刪除", style: .default) { (_) in
-//                self.loading.startAnimating()
                 MenuController.shared.deleteOrder(orderID: order.id!) { result in
                     switch result {
                     case .success(let content):
@@ -158,7 +157,6 @@ extension CountViewController: UITableViewDataSource, UITableViewDelegate {
                             self.initTotal()
                             self.initTabItem()
                             self.countTableView.reloadData()
-//                            self.loading.stopAnimating()
                         }
                         
                     case .failure(let error):

@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
     func fetchOrder() {
         var url = MenuController.shared.airtableURL.appendingPathComponent("order")
         url = URL(string:"\(url)?sort[][field]=time")!
-        print("\(url)")
+
         MenuController.shared.fetchOrderRecords(orderURL: url) { (result) in
             switch result {
             case .success(let orderLists):
@@ -65,7 +65,6 @@ class MainViewController: UIViewController {
             if let items = self.tabBarController?.tabBar.items as NSArray? {
                 let tabItem = items.object(at: 1) as! UITabBarItem
                 tabItem.badgeValue = "\(orderList.count)"
-                print("訂單數量：\(orderList.count)")
             }
         }
     }
@@ -96,19 +95,6 @@ class MainViewController: UIViewController {
         }
         
     }
-    
-    func sycnCategoryItem () -> Int{
-        let width = menuScrollView.bounds.width
-        let z = menuScrollView.contentOffset.x
-        let location = Int(z / width)
-        
-        return location
-    }
+
 }
 
-extension MainViewController {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let page = scrollView.contentOffset.x / scrollView.bounds.width
-        categoryButton[Int(page)].setTitleColor(.red, for: .normal)
-    }
-}

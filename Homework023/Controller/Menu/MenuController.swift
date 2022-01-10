@@ -16,7 +16,6 @@ class MenuController {
         let menuURL = airtableURL.appendingPathComponent(page)
         guard let components = URLComponents(url: menuURL, resolvingAgainstBaseURL: true) else { return }
         guard let menuURL = components.url else { return }
-        print("\(menuURL)")
         
         var request = URLRequest(url: menuURL)
         request.httpMethod = "GET"
@@ -29,14 +28,11 @@ class MenuController {
                     let decoder = JSONDecoder()
                     let menu = try decoder.decode(Menu.self, from: data)
                     completion(.success(menu.records))
-                    print("Fetch Menu Success")
                 } catch {
                     completion(.failure(error))
-                    print("Fetch Menu Failed")
                 }
             } else if let error = error {
                 completion(.failure(error))
-                print("Fetch Menu Failed")
             }
         }.resume()
     }
@@ -74,14 +70,10 @@ class MenuController {
                 do {
                     let decoder = JSONDecoder()
                     let orderResponse = try decoder.decode(Order.self, from: data)
-//                    print("檢查fetch order")
-//                    print(String(data: data, encoding: .utf8)!)
                     
                     completion(.success(orderResponse.records))
-                    print("Fetch Order Success")
                 } catch {
                     completion(.failure(error))
-                    print("Fetch Order Failed")
                 }
             } else if let error = error {
                 completion(.failure(error))
@@ -105,8 +97,6 @@ class MenuController {
         do {
             let encoder = JSONEncoder()
             request.httpBody = try encoder.encode(orderData)
-//            print("檢查post")
-//            print(String(data: request.httpBody!, encoding: .utf8)!)
             URLSession.shared.dataTask(with: request) { data, response, resError in
                 if let data = data,
                    let content = String(data: data, encoding: .utf8) {
@@ -125,7 +115,6 @@ class MenuController {
         orderURL = orderURL.appendingPathComponent(orderID)
         guard let components = URLComponents(url: orderURL, resolvingAgainstBaseURL: true) else { return }
         guard let orderURL = components.url else { return }
-        print("delete:\(orderURL)")
         
         var request = URLRequest(url: orderURL)
         request.httpMethod = "DELETE"
@@ -149,7 +138,6 @@ class MenuController {
         let orderURL = airtableURL.appendingPathComponent("order")
         guard let components = URLComponents(url: orderURL, resolvingAgainstBaseURL: true) else { return }
         guard let orderURL = components.url else { return }
-        print("updateOrder's oderURL:\(orderURL)")
         var request = URLRequest(url: orderURL)
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "PATCH"
@@ -157,8 +145,6 @@ class MenuController {
         do {
             let encoder = JSONEncoder()
             request.httpBody = try encoder.encode(orderData)
-            print("檢查patch")
-            print(String(data: request.httpBody!, encoding: .utf8)!)
             URLSession.shared.dataTask(with: request) { data, response, resError in
                 if let data = data,
                    let content = String(data: data, encoding: .utf8) {

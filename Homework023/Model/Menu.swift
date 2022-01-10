@@ -11,7 +11,6 @@ struct MenuFields: Codable {
     let name : String
     let midPrice : Int?
     let largePrice : Int?
-//    let reminder: String?
     let category : String
     let description : String
     let image : [MenuDrinkImage]
